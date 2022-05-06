@@ -1,0 +1,18 @@
+
+
+class Cal:
+    def add(self,a,b):
+        print(a+b);
+
+class mycal:
+    def sub(self,a,b):
+        print(a-b);
+
+class cal2(Cal,mycal):
+    def mul(self,a,b):
+        print(a*b);
+
+c2=cal2();
+c2.add(100,200);
+c2.sub(200,100);
+c2.mul(2,4);
