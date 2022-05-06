@@ -1,0 +1,23 @@
+class Emp:
+
+    def __init__(self):
+        self.uid = input("Enter your uid :");
+        self.name = input("Enter your name :");
+        self.age = int(input("Enter your age"));
+        self.salary = int(input("enter your salary"));
+        self.design = input("enter your desgination");
+
+    def display(self):
+        print("uid of :", self.uid);
+        print("Name of :", self.name);
+        print("age of : ", self.age);
+        print("salary of :", self.salary);
+        print("design of : ", self.design);
+    def risesalary(self):
+        print("Name of :",self.name);
+        print("age of the :",self.age);
+        print("Increase in the salary :",self.salary+20000);
+
+e = Emp();
+e.display();
+e.risesalary();
