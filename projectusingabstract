@@ -1,0 +1,98 @@
+
+
+
+
+
+
+
+
+ abstract class a{
+  String name;
+  int age;
+  int salary;
+  String des;
+  	Scanner sc=new Scanner(System.in);
+   a(){
+     System.out.println("Enter the name");
+     name = sc.next();
+     System.out.println("Enter the age");
+     age=sc.nextInt();
+   }
+
+   void display(){
+    System.out.println("Name of the employee is :" + name);
+    System.out.println("Age of the employee is :"+ age);
+    System.out.println("salary  of the employee is :" + salary);
+    System.out.println("Designation of the employee is :"+ des);
+  }
+}
+ class clerk extends a{
+   clerk(){
+    int salary= 1500;
+    String des="clerk";
+  }
+}
+ class programmer extends a{
+   programmer(){
+    int salary =25000;
+    String des="porgrammer";
+  }
+}
+ class Manager extends a{
+   Manager(){
+    int salary =45000;
+    String des="Manager";
+  }
+}
+
+	import java.util.*;
+ class t {
+public static void main(String[] args) {
+  int n=0;
+  int p=0;
+  do {
+    System.out.println("---------");
+    System.out.println("1).Create");
+      System.out.println("2).Display");
+        System.out.println("3).Rise");
+          System.out.println("4).Exit");
+          System.out.println("-------------");
+          System.out.println("Enter the choice");
+          n=sc.nextInt();
+        if(n==1){
+          do {
+
+            System.out.println("1).clerk");
+            System.out.println("2).programmer");
+            System.out.println("3).Manager");
+            System.out.println("4).Exit");
+            System.out.println("-------------");
+            System.out.println("Enter the choice");
+            p=sc.nextInt();
+            switch(p){
+              case 1:
+              {
+                clerk c=new clerk();
+                break;
+              }
+              case 2:
+              {
+                programmer p = new programmer();
+                break;
+              }
+              case 4:
+              {
+                manager m= new Manager();
+                break;
+              }
+              default: break;
+            }
+          } while (n>4);
+        }if (n=2) {
+          m.display();
+          c.display();
+          p.display();
+        }
+  } while (n!=4);
+}
+ }
